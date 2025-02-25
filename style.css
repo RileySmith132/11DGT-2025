@@ -1,0 +1,84 @@
+body {
+    font-family: Arial;
+}
+
+.nav-bar {
+    padding: 15px;
+    margin-bottom: 20px;
+    position: fixed;
+    top: 0;
+    background-color: rgb(25, 25, 25);
+    color: rgb(255, 255, 255);
+    width: 100%;
+}
+
+.nav-button {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    border: none;
+    background-color: rgb(25, 25, 25);
+    cursor: pointer;
+    font-size: 20px;
+    margin-right: 40px;
+}
+
+.nav-button:hover {
+    text-decoration: underline;
+}
+
+.nav-button:active {
+    opacity: 0.5;
+}
+
+#home-main-img {
+    width: 1550px;
+    height: 300px;
+    margin-left: 35px;
+    object-fit: cover;
+    margin-top: 50px;
+    margin-left: 0%;
+}
+
+#index-title {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#image-copyright {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    display: block;
+
+}
+
+#image-copyright:hover {
+    text-decoration: underline;
+}
+
+#home-button {
+    margin-left: 20px;
+}
+
+#placeholder {
+    width: 500px;
+    height: 750px;
+}
+
+.title {
+    color: white;
+    position: absolute;
+    position: fixed;
+    margin-left: 40%;
+    margin-top: 0px;
+    font-weight: normal;
+}
+
+#about-paragraph {
+    display: inline;
+}
+
+.chicken-images {
+    margin-top: -160px;
+    margin-left: 60%;
+}
