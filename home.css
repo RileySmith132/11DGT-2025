@@ -1,0 +1,171 @@
+body {
+    font-family: Arial;
+}
+
+.nav-bar {
+    padding: 15px;
+    margin-bottom: 20px;
+    position: fixed;
+    top: 0;
+    background-color: rgba(25, 25, 25, 0.87);
+    color: white;
+    width: 100%;
+}
+
+.nav-button {
+    color: white;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    margin-right: 40px;
+}
+
+.nav-button:hover {
+    text-decoration: underline;
+}
+
+.nav-button:active {
+    opacity: 0.5;
+}
+
+#home-main-img {
+    width: 100%;
+    height: 300px;
+    margin-left: 35px;
+    object-fit: cover;
+    margin-top: 50px;
+    margin-left: 0%;
+}
+
+#image-copyright {
+    color: black;
+    text-decoration: none;
+    display: block;
+
+}
+
+#image-copyright:hover {
+    text-decoration: underline;
+}
+
+#home-button {
+    margin-left: 20px;
+}
+
+#placeholder {
+    width: 500px;
+    height: 750px;
+}
+
+.title {
+    color: white;
+    position: absolute;
+    position: fixed;
+    margin-left: 40%;
+    margin-top: 0px;
+    font-weight: normal;
+}
+
+#about-paragraph {
+    display: inline;
+}
+
+.chicken-images {
+    margin-top: -160px;
+    margin-left: 60%;
+}
+
+.contact-us-section {
+    color: white;
+    background-color: rgb(25, 25, 25);
+    margin-bottom: 0;
+    padding-left: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 30px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+#email-input {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-size: 15px;
+    border-radius: 5px;
+    padding-left: 0.4%;
+    margin-bottom: 20px;
+    padding-right: 13.5%;
+    border: none;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+#submit-button {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: none;
+    margin-bottom: 20px;
+}
+
+#submit-button:hover {
+    opacity: 0.95;
+}
+
+#submit-button:active {
+    opacity: 0.8;
+}
+
+#message-input {
+    font-family: Arial;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 5px;
+    font-size: 15px;
+    border-radius: 5px;
+    padding-left: 5px;
+    resize: none;
+    margin-bottom: 20px;
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.pageLink {
+    color: white;
+    text-decoration: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#index-link {
+    margin-right: 20px;
+}
+
+#products-link {
+    margin-right: 20px;
+}
+
+.pageLink:hover {
+    text-decoration: underline;
+}
+
+.page-links {
+    text-align: center;
+}
+
+#contact-title {
+    margin-top: 0;
+}
+
+.inputs {
+    margin-right: 50%;
+    display: inline;
+}

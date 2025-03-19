@@ -2,10 +2,12 @@
 
 <html lang="en">
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=2.0">
+        <meta charset="UTF-8">
         <title>Riley's Eggs</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="home.css">
         <link rel="icon" type="image/x-icon" href="images/title-image.png">
-        <script src="scripts.js"></script>
+        <script src="script.js"></script>
     </head>
 
     <body>
@@ -15,11 +17,11 @@
             <a href="Products.html" class="nav-button">Products</a>
             <a href="About-Us.html" class="nav-button">About Us</a>
         </div>
+        
 
         <h1 class="title">Riley's Eggs</h1>
-
         <img alt="Free range chickens in a field" src="images/chickens.jpg" id="home-main-img">
-        <a id="image-copyright" href="https://www.consumer.org.nz/articles/free-range-claims/know-the-issue">image source</a>
+        <a id="image-copyright" href="https://www.consumer.org.nz/articles/free-range-claims/know-the-issue" target="">image source</a>
 
         <h1>World's Best Eggs!!</h1>
         <p id="about-paragraph">Riley's Eggs began in 2016 as a family business, and has been successful ever since. We offer the best Eggs
@@ -33,6 +35,23 @@
         <div class="chicken-images">
             <img alt="Chicken with human head" src="images/chicken-facing-left.png" id="logo">
             <img alt="Chicken with human head" src="images/chicken-facing-right.png">
+        </div>
+
+        <div class="contact-us-section">
+            
+            <h1 id="contact-title">Contact Us</h1>
+            <div class="inputs">
+                <input placeholder="Your email" id="email-input">
+                <textarea placeholder="Message" id="message-input" rows="8" cols="50"></textarea>
+                <button id="submit-button" onclick="confirmSubmit();">Submit</button>
+                <p id="js-submit-confirm"></p>
+            </div>
+
+            <div class="page-links">
+                <a href="index.html" class="pageLink" id="index-link">Home</a>
+                <a href="Products.html" class="pageLink" id="products-link">Products</a>
+                <a href="About-Us.html" class="pageLink">About</a>
+            </div>
         </div>
         
     </body>

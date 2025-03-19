@@ -1,0 +1,11 @@
+.title {
+    display: inline;
+    margin-left: 23%
+}
+
+.product {
+    border: 2px solid black;
+    margin-right: 20px;
+    padding-bottom: 30px;
+    border-radius: 10px;
+}

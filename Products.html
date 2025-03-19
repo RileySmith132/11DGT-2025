@@ -3,9 +3,10 @@
 <html lang="en">
     <head>
         <title>Products</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="home.css">
+        <link rel="stylesheet" href="products.css">
         <link rel="icon" type="image/x-icon" href="images/title-image.png">
-        <script src="scripts.js"></script>
+        <script src="script.js"></script>
     </head>
 
     <body>
@@ -14,9 +15,85 @@
             <a href="index.html" class="nav-button" id="home-button">Home</a>
             <a href="Products.html" class="nav-button">Products</a>
             <a href="About-Us.html" class="nav-button">About Us</a>
+            <h1 class="title">Products</h1>
         </div> 
 
-        <h1 class="title">Products</h1>
+        <div class="background">
+            <div class="products">
+
+                <div class="product1">
+                    <h1 class="productTitle">6 Eggs</h1>
+                    <img alt="six eggs in a carton" src="images/6Eggs.jpg" class="productImg">
+                    <p class="price">$3.00</p>
+                    <p class="productDesciption">6 Delicious free range eggs</p>
+                    <button class="buyBtn" id="js-6Eggs" onclick="blur();">Buy now</button>
+                </div>
+
+                <div class="product2">
+                    <h1 class="productTitle">10 Eggs</h1>
+                    <img alt="10 eggs in a carton" src="images/10Eggs.jpg" class="productImg">
+                    <p class="price">$5.00</p>
+                    <p class="productDesciption">10 Delicious free range eggs</p>
+                    <a href="buyNow.html"><button class="buyBtn">Buy now</button></a>
+                </div>
+
+                <div class="product3">
+                    <h1 class="productTitle">12 Eggs</h1>
+                    <img alt="12 eggs in a carton" src="images/12Eggs.jpg" class="productImg">
+                    <p class="price">$6.00</p>
+                    <p class="productDesciption">12 Delicious free range eggs</p>
+                    <a href="buyNow.html"><button class="buyBtn">Buy now</button></a>
+                </div>
+
+                <div class="product4">
+                    <h1 class="productTitle">18 Eggs</h1>
+                    <img alt="18 eggs in a carton" src="images/18Eggs.jpg" class="productImg">
+                    <p class="price">$9.00</p>
+                    <p class="productDesciption">18 Delicious free range eggs</p>
+                    <a href="buyNow.html"><button class="buyBtn">Buy now</button></a>
+                </div>
+
+                <div class="product5">
+                    <h1 class="productTitle">24 Eggs</h1>
+                    <img alt="18 eggs in a carton" src="images/24Eggs.jpg" class="productImg">
+                    <p class="price">$12.00</p>
+                    <p class="productDesciption">24 Delicious free range eggs</p>
+                    <a href="buyNow.html"><button class="buyBtn">Buy now</button></a>
+                </div>
+
+                <div class="product6">
+                    <h1 class="productTitle">30 Eggs</h1>
+                    <img alt="18 eggs in a carton" src="images/30Eggs.jpg" class="productImg">
+                    <p class="price">$15.00</p>
+                    <p class="productDesciption">30 Delicious free range eggs</p>
+                    <a href="buyNow.html"><button class="buyBtn">Buy now</button></a>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="sixEggsDown">
+            <h1 class="down">6 Eggs</h1>
+            <img alt="6 eggs in a carton" src="images/6Eggs.jpg" class="sixEggsImg">
+            <p class="down">Six Delicious free range eggs, freshly collected and cleaned.</p>
+            <button class="buyBtn">Buy now</button>
+        </div>
+
+        <div class="contact-us-section">
+            
+            <h1 id="contact-title">Contact Us</h1>
+            <div class="inputs">
+                <input placeholder="Your email" id="email-input">
+                <textarea placeholder="Message" id="message-input" rows="8" cols="50"></textarea>
+                <button id="submit-button" onclick="confirmSubmit();">Submit</button>
+                <p id="js-submit-confirm"></p>
+            </div>
+
+            <div class="page-links">
+                <a href="index.html" class="pageLink" id="index-link">Home</a>
+                <a href="Products.html" class="pageLink" id="products-link">Products</a>
+                <a href="About-Us.html" class="pageLink">About</a>
+            </div>
         
     </body>
 
