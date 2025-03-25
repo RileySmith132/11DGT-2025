@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="products.css">
         <link rel="icon" type="image/x-icon" href="images/title-image.png">
         <script src="script.js"></script>
+
     </head>
 
     <body>
@@ -24,59 +25,82 @@
                 <div class="product1">
                     <h1 class="productTitle">6 Eggs</h1>
                     <img alt="six eggs in a carton" src="images/6Eggs.jpg" class="productImg">
-                    <p class="price">$3.00</p>
+                    <p class="price1">$3.00</p>
                     <p class="productDesciption">6 Delicious free range eggs</p>
-                    <button class="buyBtn" id="js-6Eggs" onclick="blur();">Buy now</button>
+                    <button class="buyBtn" id="js-6Eggs" onclick="blury('6 Eggs');">Buy now</button>
                 </div>
 
                 <div class="product2">
                     <h1 class="productTitle">10 Eggs</h1>
                     <img alt="10 eggs in a carton" src="images/10Eggs.jpg" class="productImg">
-                    <p class="price">$5.00</p>
+                    <p class="price1">$5.00</p>
                     <p class="productDesciption">10 Delicious free range eggs</p>
-                    <a href="buyNow.html"><button class="buyBtn">Buy now</button></a>
+                    <button class="buyBtn" onclick="blury('10 Eggs');">Buy now</button>
                 </div>
 
                 <div class="product3">
                     <h1 class="productTitle">12 Eggs</h1>
                     <img alt="12 eggs in a carton" src="images/12Eggs.jpg" class="productImg">
-                    <p class="price">$6.00</p>
+                    <p class="price1">$6.00</p>
                     <p class="productDesciption">12 Delicious free range eggs</p>
-                    <a href="buyNow.html"><button class="buyBtn">Buy now</button></a>
+                    <button class="buyBtn" onclick="blury('12 Eggs')">Buy now</button>
                 </div>
 
                 <div class="product4">
                     <h1 class="productTitle">18 Eggs</h1>
                     <img alt="18 eggs in a carton" src="images/18Eggs.jpg" class="productImg">
-                    <p class="price">$9.00</p>
+                    <p class="price1">$9.00</p>
                     <p class="productDesciption">18 Delicious free range eggs</p>
-                    <a href="buyNow.html"><button class="buyBtn">Buy now</button></a>
+                    <button class="buyBtn" onclick="blury('18 Eggs');">Buy now</button>
                 </div>
 
                 <div class="product5">
                     <h1 class="productTitle">24 Eggs</h1>
                     <img alt="18 eggs in a carton" src="images/24Eggs.jpg" class="productImg">
-                    <p class="price">$12.00</p>
+                    <p class="price1">$12.00</p>
                     <p class="productDesciption">24 Delicious free range eggs</p>
-                    <a href="buyNow.html"><button class="buyBtn">Buy now</button></a>
+                    <button class="buyBtn" onclick="blury('24 Eggs');">Buy now</button>
                 </div>
 
                 <div class="product6">
                     <h1 class="productTitle">30 Eggs</h1>
                     <img alt="18 eggs in a carton" src="images/30Eggs.jpg" class="productImg">
-                    <p class="price">$15.00</p>
+                    <p class="price1">$15.00</p>
                     <p class="productDesciption">30 Delicious free range eggs</p>
-                    <a href="buyNow.html"><button class="buyBtn">Buy now</button></a>
+                    <button class="buyBtn" onclick="blury('30 Eggs');">Buy now</button>
                 </div>
 
             </div>
         </div>
 
-        <div class="sixEggsDown">
-            <h1 class="down">6 Eggs</h1>
-            <img alt="6 eggs in a carton" src="images/6Eggs.jpg" class="sixEggsImg">
-            <p class="down">Six Delicious free range eggs, freshly collected and cleaned.</p>
-            <button class="buyBtn">Buy now</button>
+        <div class="EggsDown">
+            <div class="left">
+                <h1 class="billTitle"></h1>
+                <img alt="eggs in a carton" src="" id="eggsImage">
+                <p class="billDescription"></p>
+                <p class="price"></p>
+            </div>
+
+            <div class="right">
+                <button class="exit" onclick="unblury();">x</button>
+                <h1 class="billing-title">Billing information</h1>
+                <p class="nameTitle">Name on Card</p>
+                <p class="noName"></p>
+                <p class="expiryTitle">Expiry</p>
+                <input type="text" class="cardName" placeholder="Name">
+                <input type="text" class="month" placeholder="mm">
+                <input type="text" class="year" placeholder="yy">
+                <p class="noexpire"></p>
+                <p class="cardNumTitle">Card Number</p>
+                <p class="cvvTitle">CVV</p>
+                <input class="CardNum" placeholder="0000 0000 0000 0000">
+                <input type="password" placeholder="CVV" class="cvvinput">
+                <p class="noNum"></p>
+                <p class="noCvv"></p>
+                <p class="total"></p>
+                <button class="btn" onclick="buy();">Buy Now</button>
+                <p class="bought"></p>
+            </div>
         </div>
 
         <div class="contact-us-section">
@@ -94,7 +118,7 @@
                 <a href="Products.html" class="pageLink" id="products-link">Products</a>
                 <a href="About-Us.html" class="pageLink">About</a>
             </div>
-        
+        </div>
     </body>
 
 </html>

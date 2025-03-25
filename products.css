@@ -6,7 +6,7 @@
 .products {
     display: grid;
     grid-template-rows: repeat(4, 1fr);
-    grid-template-columns: repeat(4, 350px);
+    grid-template-columns: repeat(4, 24%);
     margin-top: 80px;
     margin-left: 5%;
     text-align: center;
@@ -15,14 +15,14 @@
 
 .product1 {
     border: 2px solid black;
-    margin-right: 20px;
+    margin-right: 5%;
     padding-bottom: 30px;
     border-radius: 10px;
 }
 
 .product2 {
     border: 2px solid black;
-    margin-right: 20px;
+    margin-right: 5%;
     padding-bottom: 30px;
     border-radius: 10px;
 }
@@ -31,7 +31,7 @@
     border: 2px solid black;
     padding-bottom: 30px;
     border-radius: 10px;
-    margin-right: 20px;
+    margin-right: 5%;
 }
 
 .product4 {
@@ -45,7 +45,7 @@
     padding-bottom: 30px;
     border-radius: 10px;
     margin-top: 20px;
-    width: 327px;
+    margin-right: 5%;
 }
 
 .product6 {
@@ -53,7 +53,7 @@
     padding-bottom: 30px;
     border-radius: 10px;
     margin-top: 20px;
-    width: 327px;
+    margin-right: 5%;
 }
 
 .product1:hover {
@@ -123,26 +123,214 @@
     margin-bottom: 30px;
 }
 
-.price {
+.price1 {
     font-size: 20px;
 }
 
-.background.blurred {
-    filter: blur(10px);
-}
-
-.sixEggsDown {
+.EggsDown {
     display: none;
 }
 
-.sixEggsUp {
+.EggsUp {
+    padding: 10px;
+    width: 63.5%;
+    height: 500px;
+    position: absolute;
+    margin-top: -60%;
+    margin-left: 17%;
+    border-radius: 5px;
     background-color: white;
     box-shadow: 5 10px 10px rgba(0, 0, 0, 0.2);
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 400px);
+
+}
+
+.left {
     padding: 10px;
-    width: 400px;
     text-align: center;
-    position: absolute;
-    margin-top: -30%;
-    margin-left: 35%;
+    margin-right: 10%;
+}
+
+.backgroundBlur {
+    filter: blur(5px);
+}
+
+.billing-title {
+    display: inline;
+}
+
+.right {
+    margin-top: 30px;
+    margin-left: 50px;
+    width: 500px;
+}
+
+.cardName {
+    width: 50%;
+    height: 30px;
+    font-size: 15px;
     border-radius: 5px;
+    border: 1px solid black;
+    padding-left: 5px;
+    margin-top: -10px;
+}
+
+.nameTitle {
+    font-size: 15px;
+    margin-top: 50px;
+    display: inline-block;
+    margin-right: 190px;
+}
+
+.expiryTitle {
+    display: inline-block;
+    font-size: 15px;
+}
+
+.month, .year {
+    margin-top: -50px;
+    border-width: 1px;
+    height: 30px;
+    font-size: 15px;
+    padding-left: 5px;
+    border-style: solid;
+    border-color: black;
+}
+
+.month {
+    border-right: none;
+    border-radius: 5px 0px 0px 5px;
+    margin-right: -4.9px;
+    width: 30px;
+    margin-left: 25px;
+}
+
+.year {
+    border-left: none;
+    border-radius: 0px 5px 5px 0px;
+    width: 40px;
+    margin-right: 10%;
+}
+
+.cardNumTitle {
+    display: inline-block;
+    margin-right: 195px;
+    font-size: 15px;
+}
+
+.CardNum {
+    width: 50%;
+    height: 30px;
+    font-size: 15px;
+    border-radius: 5px;
+    border-width: 1px;
+    margin-top: -10px;
+    padding-left: 5px;
+    border-style: solid;
+    border-color: black;
+}
+
+.cvvTitle {
+    display: inline-block;
+    font-size: 15px;
+}
+
+.cvvinput {
+    width: 70px;
+    height: 30px;
+    font-size: 15px;
+    border-radius: 5px;
+    border-width: 1px;
+    margin-top: -10px;
+    margin-left: 25px;
+    padding-left: 5px;
+    border-style: solid;
+    border-color: black;
+}
+
+#buy {
+    display: block;
+    margin-top: 50px;
+}
+
+.exit {
+    height: 25px;
+    width: 25px;
+    position: absolute;
+    right: 0;
+    margin-top: -41px;
+    background-color: transparent;
+    border: none;
+    font-size: 25px;
+    text-align: center;
+    border-radius: 5px;
+    padding-bottom: 30px;
+}
+
+.exit:hover {
+    cursor: pointer;
+    background-color: red;
+}
+
+.total {
+    font-size: 17px;
+}
+
+.btn {
+    color: black;
+    background-color: rgb(228, 157, 59);
+    border: none;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-radius: 20px;
+    font-size: 15px;
+}
+
+.btn:hover {
+    cursor: pointer;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.noName {
+    position: absolute;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    color: red;
+    margin-top: 35px;
+}
+
+.margin {
+    margin-top: 60px;
+}
+
+.noexpire {
+    position: absolute;
+    margin-left: 290px;
+    color: red;
+    margin-top: 7px;
+}
+
+.noNum {
+    position: absolute;
+    margin-top: 7px;
+    color: red;
+}
+
+.noCvv {
+    position: absolute;
+    margin-top: 7px;
+    color: red;
+    margin-left: 290px;
+}
+
+.bought {
+    margin-top: 50px;
+}
+
+.price {
+    font-size: 20px;
 }
