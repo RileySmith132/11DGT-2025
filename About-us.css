@@ -1,0 +1,48 @@
+
+/*Style for the title. The title will be Arial, have absolute positioning, and has a font size of 50px. It is positioned using margin.*/
+#about-title {
+    font-family: Arial;
+    position: absolute;
+    font-size: 50px;
+    top: 10%;
+    left: 56%;
+}
+
+/*Style for the image. The image is an inline block element, takes up 32% of the available width, and is 650px high.*/
+#riley {
+    margin-top: 80px;
+    margin-left: 2%;
+    width: 32%;
+    height: 650px;
+    object-fit: cover;
+    display: inline-block;
+    margin-bottom: 5%;
+}
+
+/*Style for the about paragraph. The paragraph takes up 51% of the available space, is an inline block element, has a font size of 20px, and has absolute positioning.*/
+#about-paragraph {
+    width: 51%;
+    display: inline-block;
+    font-size: 20px;
+    position: absolute;
+    margin-top: -620px;
+    margin-left: 40%;
+}
+
+/*Style for the video. The video has absolute positioning, no border, is 250px high and 450px wide, and has slightly rounded corners.*/
+#video {
+    position: absolute;
+    border: none;
+    height: 250px;
+    width: 450px;
+    border-radius: 10px;
+    margin-top: -23%;
+    margin-left: 50%;
+}
+
+/*Style for devices with a screen size less than 1414px. The video will have -25% margin at the top.*/
+@media (max-width: 1414px) {
+    #video {
+        margin-top: -25%;
+    }
+}

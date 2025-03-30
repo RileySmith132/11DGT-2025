@@ -3,19 +3,67 @@
 <html lang="en">
     <head>
         <title>About Us</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="home.css">
+        <link rel="stylesheet" href="About-us.css">
         <link rel="icon" type="image/x-icon" href="images/title-image.png">
-        <script src="scripts.js"></script>
+        <script src="script.js"></script>
     </head>
 
     <body>
-
+        <!--
+        Nav bar with links to access other pages. Classes have been added so I can target all these links at once in my css,
+        and ids have beeen added so I can target the links individually.
+        -->
         <div class="nav-bar">
             <a href="index.html" class="nav-button" id="home-button">Home</a>
-            <a href="Products.html" class="nav-button">Products</a>
-            <a href="About-Us.html" class="nav-button">About Us</a>
-        </div> 
+            <a href="Products.html" class="nav-button" id="product-button">Products</a>
+            <a href="About-Us.html" class="nav-button" id="about-button">About Us</a>
+        </div>
+
+        <!--Main image-->
+        <img alt="Riley" src="images/riley.jpeg" id="riley">
         
+        <!--Container for all the text on the about us page-->
+        <div class="about-text">
+
+            <!--Title and paragraph about the business-->
+            <h1 id="about-title">About Us</h1>
+            <p id="about-paragraph">Riley's Eggs is a family-owned business that began in 2015 when a young boy returned home to find 30 chickens nestled in a brand new chicken coop. Inspired by the simple joys of raising chickens and producing fresh, high-quality eggs, Riley quickly turned this unexpected gift into a thriving business. What started as a humble venture in their backyard has now grown into a trusted local supplier known for its farm-fresh, sustainably produced eggs. With a commitment to ethical farming practices, Riley's Eggs provides customers with a product they can feel good about, knowing it comes from a place where the chickens are well cared for and the eggs are always fresh.</p>
+            
+            <!--Video-->
+            <iframe src="https://www.youtube.com/embed/K6HjarkCgC0" id="video"></iframe>
+        </div>
+
+        <!--This div is a container for all the content in the contact us section at the bottom of the page-->
+        <div class="contact-us-section">
+            
+            <h1 id="contact-title">Contact Us</h1>
+            <!--
+            Form for the user to fill out to send a message to inquire or give feedback. The GET method is used to send data to the server as
+            a part of the url. This form contains an input for the user's email, and an input for the message the user would like to send. The 
+            "required" attribute in each input specifies that the user must fill in these inputs, so that if the input is blank the browser will
+            display an error message and the form will not be submitted. The type attribute tells the browser what information should be entered
+            into the input, for instance type="email" tells the browser that an email must be entered into the input. If the user does not enter
+            an email that follows the structure example@example, The browser will display a message and the form will not be submitted.
+            -->
+            <form method="GET">
+                <div class="inputs">
+                    <input placeholder="Your email" id="email-input" type="email" name="email" required>
+                    <textarea placeholder="Message" id="message-input" rows="8" cols="50" name="message" required></textarea>
+                    <button id="submit-button" type="submit">Submit</button>
+                    <p id="js-submit-confirm"></p>
+                </div>
+            </form>
+
+            <!--Links to navigate to the other pages. Classes have been added so the links can be styled in my css.-->
+            <div class="page-links">
+                <a href="index.html" class="pageLink" id="index-link">Home</a>
+                <a href="Products.html" class="pageLink" id="products-link">Products</a>
+                <a href="About-Us.html" class="pageLink">About</a>
+            </div>
+        </div>
+
     </body>
 
 </html>

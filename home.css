@@ -1,7 +1,40 @@
 body {
+    /*This sets the font of the text in the body section of the web page to Arial.*/
     font-family: Arial;
+    /*
+    This applies an animation to the body section of the web page, which is called changecolor.
+    This animation is linear, which means the animation will progress at a constant speed from start to finish.
+    The animation will take 8 seconds to complete one cycle, and will repeat forever.
+    */
+    animation: changeColor 8s linear infinite;
 }
 
+/*
+This defines the changecolor animation. At the start of the animation, the background color of the body section will
+be rgb(230, 184, 94). The background color will gradually change until the halfway point, when it will be the color
+rgb(244, 216, 160). The background color will then coninue to change back to rgb(230, 184, 94) for the rest of the
+cycle. rgb() defines how much red green and blue the color should have.
+*/
+
+@keyframes changeColor {
+    0% {
+        background-color: rgb(230, 184, 94);
+    }
+
+    50% {
+        background-color: rgb(244, 216, 160);
+    }
+
+    100% {
+        background-color: rgb(230, 184, 94);
+    }
+}
+
+/*
+Style for the navigation bar. The navigation bar is black and slightly see through, and the text inside
+it is white. There is no space above it but 20px of space below it, and it takes up 100%of the width 
+available.
+*/
 .nav-bar {
     padding: 15px;
     margin-bottom: 20px;
@@ -11,8 +44,13 @@ body {
     color: white;
     width: 100%;
     z-index: 5;
+    left: 0;
 }
 
+/*
+Style for all the links in the navigation bar. These links are white, have no border, have a font of 20px,
+and when they are hovered over the user's cursor will change to a pointer.
+*/
 .nav-button {
     color: white;
     text-decoration: none;
@@ -23,6 +61,10 @@ body {
     position: relative;
 }
 
+/*
+This creates an element before a navigation link when it is hovered over. This element has no content, absolute positioning,
+is white, takes up 100% of the width available, and is 2px high. These elements appear as a white line underneath the page links.
+*/
 .nav-button:hover::before {
     content: '';
     position: absolute;
@@ -32,35 +74,64 @@ body {
     bottom: -5px;
 }
 
+/*When a navigation link is clicked, it will become 50% see through.*/
 .nav-button:active {
     opacity: 0.5;
+}
+
+/*
+Defines a style for devices with a width of less than 500 pixels. Each navigation link will have 45% margin to the right of them.
+The navigation bar will be 400px long, and have no space to the left of it. The home page link will have 50% margin to the left of it.
+*/
+@media (max-width: 500px) {
+    .nav-button {
+        margin-right: 45px;
+    }
+
+    .nav-bar {
+        width: 400px;
+        left: 0;
+    }
+
+    #home-button {
+        margin-left: 50%;
+    }
 }
 
 #home-button {
     margin-left: 20px;
 }
 
+/*
+All elements with the title class will be white, will stay at the top of the page when scrolling, and  will have40% margin to the left of them.
+*/
 .title {
     color: white;
-    position: absolute;
     position: fixed;
     margin-left: 40%;
-    margin-top: 0px;
+    margin-top: -5px;
     font-weight: normal;
 }
 
+/*
+Style for the contact us section. All text in the contact section will be white.
+The contact us section will be black, and have no space bellow it.
+*/
 .contact-us-section {
     color: white;
     background-color: rgb(25, 25, 25);
     margin-bottom: 0;
     padding-left: 20px;
-    padding-top: 5px;
     padding-bottom: 5px;
     margin-top: 30px;
     padding-top: 20px;
-    text-align: center;
 }
 
+/*
+Style for the email input. This input will have a font size of 15px, will be slightly rounded on the corners,
+have no border, is a block element which means it will take up the whole width available. This input takes up
+12% of the width available and is centered by setting the left and right margin to auto.
+*/
 #email-input {
     padding-top: 8px;
     padding-bottom: 8px;
@@ -77,6 +148,10 @@ body {
     width: 12%;
 }
 
+/*
+Style for the submit button. The corners of this button are slightly rounded. When hovered over, the user's cursor will change to
+a pointer. The button is centered by setting the margin to auto. The button is a block element, and has 20px of space below it.
+*/
 #submit-button {
     padding-top: 8px;
     padding-bottom: 8px;
@@ -86,17 +161,27 @@ body {
     padding-right: 10px;
     border: none;
     margin-bottom: 20px;
-    display: inline-block;
+    display: block;
+    margin: auto;
+    width: fit-content;
+    text-align: center;
 }
 
+/*When the submit button is hovered over, it will become slightly see through.*/
 #submit-button:hover {
     opacity: 0.95;
 }
 
+/*When the submit button is clicked, it will become even more see through.*/
 #submit-button:active {
     opacity: 0.8;
 }
 
+/*
+Style for the message input. The text in this input is Arial, and is 15px big. The input cannot be resized
+by the user, and the input is centered by setting the left and right margins to auto. The corners of the input
+are slightly rounded, and the input takes up 25.5% of the width available.
+*/
 #message-input {
     font-family: Arial;
     padding-top: 8px;
@@ -104,7 +189,6 @@ body {
     padding-left: 5px;
     font-size: 15px;
     border-radius: 5px;
-    padding-left: 5px;
     resize: none;
     margin-bottom: 20px;
     border: none;
@@ -114,6 +198,10 @@ body {
     width: 25.5%;
 }
 
+/*
+Style for the page links at the bottom of the contact us section. These links are white, and are centered by setting
+the left and right margins to auto.
+*/
 .pageLink {
     color: white;
     text-decoration: none;
@@ -121,28 +209,139 @@ body {
     margin-right: auto;
 }
 
-#index-link {
+/*Adds margin to the right of the home page and products page links*/
+#index-link, #products-link {
     margin-right: 20px;
 }
 
-#products-link {
-    margin-right: 20px;
-}
-
+/*Underlines the page link when hovered over*/
 .pageLink:hover {
     text-decoration: underline;
 }
 
+/*
+Centers the page links
+*/
 .page-links {
     text-align: center;
 }
 
+/*Centers the contact us title and set the top margin to 0*/
 #contact-title {
     margin-top: 0;
+    text-align: center;
 }
 
+/*Changes the display of the input to inline and sets the right margin to 50%*/
 .inputs {
     margin-right: 50%;
     display: inline;
 }
 
+/*
+Style for devices with a width below 500px. The email input will take up 60% of the available width, and the message input
+will take up 70% of the available width. The contact us section will have no space to the left or right of it, or at the bottom
+of it. The submit button will be a greyish color and the it's text color will be black.
+*/
+@media (max-width: 500px) {
+    #email-input {
+        width: 60%;
+    }
+
+    #message-input {
+        width: 70%;
+    }
+
+    .contact-us-section {
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    #submit-button {
+        background-color: rgb(191, 188, 188);
+        color: black;
+        font-weight: normal;
+    }
+}
+
+
+/*
+Style the element with a class of container, which will take up 45% of the available width.
+This element will have 17% margin above it, 20% margin below it, and 5% margin to the left 
+of it.
+*/
+.container {
+    margin-top: 17%;
+    margin-bottom: 20%;
+    margin-left: 5%;
+    width: 45%;
+
+}
+
+/*
+The element with an id of homeDescription will have a font family of Arial, and be 25px big.
+*/
+#homeDescription {
+    font-family: Arial;
+    font-size: 25px;
+}
+
+/*
+The button to view the products page will be orange, have no border, it's text will be black and 15px big, and it's edges
+are slightly rounded.
+*/
+.viewProducts {
+    color: black;
+    background-color: rgb(255, 149, 0);
+    border: none;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-radius: 20px;
+    font-size: 15px;
+}
+
+/*
+When th button to view the products page is hovered over, the user's cursor will change to a pointer, and the button will have a black
+shadow that is slightly see through.
+*/
+.viewProducts:hover {
+    cursor: pointer;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+/*
+The home page image has absolute positioning, takes up 38.1% of the available width and 45% of the available height, and is an inline block.
+The image has been rotated 10 degrees clockwise and has a white border that is 10px thick and slightly rounded.
+*/
+#home-image {
+    margin-top: -1%;
+    position: absolute;
+    object-fit: cover;
+    width: 38.1%;
+    height: 45%;
+    border-radius: 40px;
+    border: 10px solid white;
+    margin-left: 4%;
+    display: inline-block;
+    transform: rotate(10deg)
+}
+
+/*The title on the home page will have a font size of 50px.*/
+.home-title {
+    font-size: 50px;
+}
+
+/*Changes the div with a class of text to an inline block rather than a block element (set by default).*/
+.text {
+    display: inline-block;
+}
+
+/*For devices with a width below 1587px, the image will have 2% margin above it.*/
+@media (max-width: 1587px) {
+    #home-image {
+        margin-top: 2%;
+    }
+}

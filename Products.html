@@ -3,23 +3,34 @@
 <html lang="en">
     <head>
         <title>Products</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="home.css">
         <link rel="stylesheet" href="products.css">
         <link rel="icon" type="image/x-icon" href="images/title-image.png">
         <script src="script.js"></script>
-
     </head>
 
     <body>
 
+        <!--
+        Nav bar with links to access other pages. Classes have been added so I can target all these links at once in my css,
+        and ids have beeen added so I can target the links individually.
+        -->
         <div class="nav-bar">
             <a href="index.html" class="nav-button" id="home-button">Home</a>
-            <a href="Products.html" class="nav-button">Products</a>
-            <a href="About-Us.html" class="nav-button">About Us</a>
+            <a href="Products.html" class="nav-button" id="product-button">Products</a>
+            <a href="About-Us.html" class="nav-button" id="about-button">About Us</a>
             <h1 class="title">Products</h1>
-        </div> 
+        </div>
 
+        <!--Acts as a container for all everything on the page except for the navigation bar and contact us section, so that I can blur it when the buy now buttons are pressed.-->
         <div class="background">
+
+            <!--
+            Container for all the products.
+            Each product has a h1 tag for the title, an image, a p tag for the price, a p tag for the description, and a button with an onclick attribute to make
+            the billing section pop up.
+            -->
             <div class="products">
 
                 <div class="product1">
@@ -73,7 +84,10 @@
             </div>
         </div>
 
+        <!--Billing section - has a class of EggsDown so that the display can be set to none intil a buy now button is clicked-->
         <div class="EggsDown">
+
+            <!--All the elements on the left side of the billing section. The left side containes a title, and image, a description, and a price.-->
             <div class="left">
                 <h1 class="billTitle"></h1>
                 <img alt="eggs in a carton" src="" id="eggsImage">
@@ -81,6 +95,10 @@
                 <p class="price"></p>
             </div>
 
+            <!--
+            All the elements on the right side of the billing section. The right side containes the exit button, the inputs for the card details,
+            and a price.
+            -->
             <div class="right">
                 <button class="exit" onclick="unblury();">x</button>
                 <h1 class="billing-title">Billing information</h1>
@@ -99,20 +117,34 @@
                 <p class="noCvv"></p>
                 <p class="total"></p>
                 <button class="btn" onclick="buy();">Buy Now</button>
+
+                <!--This paragraph currently contains no text as it will appear as a success message once all the card inputs have correctly been filled in.-->
                 <p class="bought"></p>
             </div>
         </div>
 
+        <!--This div is a container for all the content in the contact us section at the bottom of the page-->
         <div class="contact-us-section">
             
             <h1 id="contact-title">Contact Us</h1>
-            <div class="inputs">
-                <input placeholder="Your email" id="email-input">
-                <textarea placeholder="Message" id="message-input" rows="8" cols="50"></textarea>
-                <button id="submit-button" onclick="confirmSubmit();">Submit</button>
-                <p id="js-submit-confirm"></p>
-            </div>
+            <!--
+            Form for the user to fill out to send a message to inquire or give feedback. The GET method is used to send data to the server as
+            a part of the url. This form contains an input for the user's email, and an input for the message the user would like to send. The 
+            "required" attribute in each input specifies that the user must fill in these inputs, so that if the input is blank the browser will
+            display an error message and the form will not be submitted. The type attribute tells the browser what information should be entered
+            into the input, for instance type="email" tells the browser that an email must be entered into the input. If the user does not enter
+            an email that follows the structure example@example, The browser will display a message and the form will not be submitted.
+            -->
+            <form method="GET">
+                <div class="inputs">
+                    <input placeholder="Your email" id="email-input" type="email" name="email" required>
+                    <textarea placeholder="Message" id="message-input" rows="8" cols="50" name="message" required></textarea>
+                    <button id="submit-button" type="submit">Submit</button>
+                    <p id="js-submit-confirm"></p>
+                </div>
+            </form>
 
+            <!--Links to navigate to the other pages. Classes have been added so the links can be styled in my css.-->
             <div class="page-links">
                 <a href="index.html" class="pageLink" id="index-link">Home</a>
                 <a href="Products.html" class="pageLink" id="products-link">Products</a>

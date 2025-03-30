@@ -2,7 +2,7 @@
 
 <html lang="en">
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=2.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="UTF-8">
         <title>Riley's Eggs</title>
         <link rel="stylesheet" href="home.css">
@@ -11,25 +11,57 @@
     </head>
 
     <body>
-
+        <!--
+        Nav bar with links to access other pages. Classes have been added so I can target all these links at once in my css,
+        and ids have beeen added so I can target the links individually.
+        -->
         <div class="nav-bar">
             <a href="index.html" class="nav-button" id="home-button">Home</a>
-            <a href="Products.html" class="nav-button">Products</a>
-            <a href="About-Us.html" class="nav-button">About Us</a>
+            <a href="Products.html" class="nav-button" id="product-button">Products</a>
+            <a href="About-Us.html" class="nav-button" id="about-button">About Us</a>
         </div>
-        
-        
 
+        <!--This div acts as a container for the main content on the home page, and has a class so it can be targeted in my css.-->
+        <div class="container">
+
+            <!--This div is a container for the text on the home page-->
+            <div class="text">
+                <h1 class="home-title">Riley's Eggs</h1>
+                <p id="homeDescription">Riley's Eggs began in 2015 as a family business, and has been successful ever since. The worlds <strong>BEST</strong> eggs.</p>
+
+                <!--
+                Button to access products page. When the button is clicked, the function in the onclick attribute will be triggered,
+                 and the browser will be redirected the products page.
+                 -->
+                <button class="viewProducts" onclick="productsPage();">View Products</button>
+            </div>
+
+            <!--Home page image-->
+            <img id="home-image" alt="free range chickens in a field" src="images/home-image.jpg">
+        </div>
+
+        <!--This div is a container for all the content in the contact us section at the bottom of the page-->
         <div class="contact-us-section">
             
             <h1 id="contact-title">Contact Us</h1>
-            <div class="inputs">
-                <input placeholder="Your email" id="email-input" type="text">
-                <textarea placeholder="Message" id="message-input" rows="8" cols="50"></textarea>
-                <button id="submit-button" onclick="confirmSubmit();">Submit</button>
-                <p id="js-submit-confirm"></p>
-            </div>
+            <!--
+            Form for the user to fill out to send a message to inquire or give feedback. The GET method is used to send data to the server as
+            a part of the url. This form contains an input for the user's email, and an input for the message the user would like to send. The 
+            "required" attribute in each input specifies that the user must fill in these inputs, so that if the input is blank the browser will
+            display an error message and the form will not be submitted. The type attribute tells the browser what information should be entered
+            into the input, for instance type="email" tells the browser that an email must be entered into the input. If the user does not enter
+            an email that follows the structure example@example, The browser will display a message and the form will not be submitted.
+            -->
+            <form method="GET">
+                <div class="inputs">
+                    <input placeholder="Your email" id="email-input" type="email" name="email" required>
+                    <textarea placeholder="Message" id="message-input" rows="8" cols="50" name="message" required></textarea>
+                    <button id="submit-button" type="submit">Submit</button>
+                    <p id="js-submit-confirm"></p>
+                </div>
+            </form>
 
+            <!--Links to navigate to the other pages. Classes have been added so the links can be styled in my css.-->
             <div class="page-links">
                 <a href="index.html" class="pageLink" id="index-link">Home</a>
                 <a href="Products.html" class="pageLink" id="products-link">Products</a>

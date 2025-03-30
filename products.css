@@ -1,103 +1,50 @@
+
+/*Style for the title*/
 .title {
     display: inline;
     margin-left: 23%;
 }
 
+/*Style for the products div. This div has a grid layout, with four columns and 2 rows. All text inside this div is centered.*/
 .products {
     display: grid;
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 42.5%);
     grid-template-columns: repeat(4, 24%);
     margin-top: 80px;
     margin-left: 5%;
     text-align: center;
-    height: 1000px;
+    height: 1100px;
 }
 
-.product1 {
+/*Style for each of the products. Each product has a black border which is 2px thick, and slightly rounded.*/
+.product1, .product2, .product3, .product4, .product5, .product6 {
     border: 2px solid black;
     margin-right: 5%;
     padding-bottom: 30px;
     border-radius: 10px;
 }
 
-.product2 {
-    border: 2px solid black;
+/*Margin has been added to the top and right of products 5 and 6 for a tidy layout.*/
+.product5, .product6 {
     margin-right: 5%;
-    padding-bottom: 30px;
-    border-radius: 10px;
-}
-
-.product3 {
-    border: 2px solid black;
-    padding-bottom: 30px;
-    border-radius: 10px;
-    margin-right: 5%;
-}
-
-.product4 {
-    border: 2px solid black;
-    padding-bottom: 30px;
-    border-radius: 10px;
-}
-
-.product5 {
-    border: 2px solid black;
-    padding-bottom: 30px;
-    border-radius: 10px;
     margin-top: 20px;
-    margin-right: 5%;
 }
 
-.product6 {
-    border: 2px solid black;
-    padding-bottom: 30px;
-    border-radius: 10px;
-    margin-top: 20px;
-    margin-right: 5%;
-}
-
-.product1:hover {
+/*When the products are hovered over, they expand slightly, and the user's cursor changes to a pointer*/
+.product1:hover, .product2:hover, .product3:hover, .product4:hover, .product5:hover, .product6:hover {
     transform: scale(1.03);
     transition: transform 1s;
     cursor: pointer;
 }
 
-.product2:hover {
-    transform: scale(1.03);
-    transition: transform 1s;
-    cursor: pointer;
-}
-
-.product3:hover {
-    cursor: pointer;
-    transform: scale(1.03);
-    transition: transform 1s;
-}
-
-.product4:hover {
-    cursor: pointer;
-    transform: scale(1.03);
-    transition: transform 1s;
-}
-
-.product5:hover {
-    cursor: pointer;
-    transform: scale(1.03);
-    transition: transform 1s;
-}
-
-.product6:hover {
-    cursor: pointer;
-    transform: scale(1.03);
-    transition: transform 1s;
-}
-
+/*Each product image will have a height of 200px and a width of 150px*/
 .productImg {
     width: 200px;
     height: 150px;
     object-fit: cover;
 }
 
+/*The buy now buttons are orange with black text, no border, a font size of 15px, and are slightly rounded.*/
 .buyBtn {
     color: black;
     background-color: rgb(228, 157, 59);
@@ -110,63 +57,77 @@
     font-size: 15px;
 }
 
+/*When the buy now buttons are hovered over, the user's cursor changes to a pointer, and a black shadow that is slightly see through is added.*/
 .buyBtn:hover {
     cursor: pointer;
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
 }
 
+/*When the button is clicked, it becomes slightly see through.*/
 .buyBtn:active {
     opacity: 0.8;
 }
 
+/*Adds some space to the bottom of the product description*/
 .productDesciption {
     margin-bottom: 30px;
 }
 
+/*Sets the font size of the price in the billing popup*/
 .price1 {
     font-size: 20px;
 }
 
+/*Hides the billing section*/
 .EggsDown {
     display: none;
 }
 
+/*
+Style for the billing section. The billing section takes up 63.5% of the available width, is 500px high, is white with black text,
+is slightly rounded, has a black slighly see through shadow, absolute positioning, and a grid layout.
+*/
 .EggsUp {
     padding: 10px;
     width: 63.5%;
     height: 500px;
     position: absolute;
-    margin-top: -60%;
+    margin-top: -65%;
     margin-left: 17%;
     border-radius: 5px;
     background-color: white;
-    box-shadow: 5 10px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.2);
     display: grid;
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(2, 400px);
 
 }
 
+/*style for the left side of the billing section. The text is centered and there is some margin to the left of this section.*/
 .left {
     padding: 10px;
     text-align: center;
     margin-right: 10%;
 }
 
+/*blurred background*/
 .backgroundBlur {
     filter: blur(5px);
 }
 
+/*Sets the display of the title to inline element*/
 .billing-title {
     display: inline;
 }
 
+/*Style for the right side of the billing section. This section is 500px long.*/
 .right {
     margin-top: 30px;
     margin-left: 50px;
     width: 500px;
 }
 
+/*Style for the card name input. This input takes up 50% of the available width, is 30px high, and a 1px thick black border that is slightly rounded.*/
 .cardName {
     width: 50%;
     height: 30px;
@@ -177,6 +138,7 @@
     margin-top: -10px;
 }
 
+/*style for the text above the card name input. This text is 15px big, and is an inline block element.*/
 .nameTitle {
     font-size: 15px;
     margin-top: 50px;
@@ -184,11 +146,13 @@
     margin-right: 190px;
 }
 
+/*Style for the text above the expiry inputs*/
 .expiryTitle {
     display: inline-block;
     font-size: 15px;
 }
 
+/*Style for the expiry input (Which is two input combined). This input has a 1px thick border.*/
 .month, .year {
     margin-top: -50px;
     border-width: 1px;
@@ -199,6 +163,7 @@
     border-color: black;
 }
 
+/*Style for the month part of the expiry input. This part of the input has a slightly rounded border and is 30px long.*/
 .month {
     border-right: none;
     border-radius: 5px 0px 0px 5px;
@@ -207,6 +172,7 @@
     margin-left: 25px;
 }
 
+/*Style for the year part of the expiry input. This part of the input has a slightly rounded border and is 40px long.*/
 .year {
     border-left: none;
     border-radius: 0px 5px 5px 0px;
@@ -214,12 +180,17 @@
     margin-right: 10%;
 }
 
+/*Style for the text above the card number input.*/
 .cardNumTitle {
     display: inline-block;
     margin-right: 195px;
     font-size: 15px;
 }
 
+/*
+Style for the card number input. This input takes up 50% of the available width, is 30px high, has a font size of 15px,
+and has a 1px thick black border that is slighly rounded.
+*/
 .CardNum {
     width: 50%;
     height: 30px;
@@ -232,29 +203,31 @@
     border-color: black;
 }
 
+/*Style for the text above the cvv input. This is an inline block element.*/
 .cvvTitle {
     display: inline-block;
     font-size: 15px;
 }
 
+/*Style for the cvv input. This inputis 70px high and 30px long, and has a 1px thick black border that is slightly rounded.*/
 .cvvinput {
     width: 70px;
     height: 30px;
     font-size: 15px;
     border-radius: 5px;
-    border-width: 1px;
     margin-top: -10px;
     margin-left: 25px;
     padding-left: 5px;
-    border-style: solid;
-    border-color: black;
+    border: 1px solid black;
 }
 
+/*Style for the element with the id "buy".*/
 #buy {
     display: block;
     margin-top: 50px;
 }
 
+/*Style for the exit button at thye top right corner of the billing section. This button has absolute positioning and is 25px high and 25px long.*/
 .exit {
     height: 25px;
     width: 25px;
@@ -269,15 +242,18 @@
     padding-bottom: 30px;
 }
 
+/*When the exit button is hovered over, it turns red, and the user's cursor changes to a pointer.*/
 .exit:hover {
     cursor: pointer;
     background-color: red;
 }
 
+/*Sets the font size of the price total to 17px.*/
 .total {
     font-size: 17px;
 }
 
+/*Style for the buy now button on the billing page. This button is orange with a slightly rounded border and black text.*/
 .btn {
     color: black;
     background-color: rgb(228, 157, 59);
@@ -290,23 +266,26 @@
     font-size: 15px;
 }
 
+/*When the buy now button is hovered over, a black slightly see through shadow appears around it, and the user's cursor changes to a pointer.*/
 .btn:hover {
     cursor: pointer;
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
 }
 
+/*Style for the error message shown when a user does not enter a valid card name. This message is red and has absolute positioning.*/
 .noName {
     position: absolute;
     margin-top: 40px;
     margin-bottom: 40px;
     color: red;
-    margin-top: 35px;
 }
 
+/*Adds margin to the top of the error message*/
 .margin {
     margin-top: 60px;
 }
 
+/*Style for the error message shown when a user does not enter a valid expiry date. This message is red and has absolute positioning.*/
 .noexpire {
     position: absolute;
     margin-left: 290px;
@@ -314,12 +293,14 @@
     margin-top: 7px;
 }
 
+/*Style for the error message shown when a user doesn not enter a valid card number. This message is red and has absolute positioning.*/
 .noNum {
     position: absolute;
     margin-top: 7px;
     color: red;
 }
 
+/*Style for the error message shown when a user does not enter a valid cvv. This message isr ed and has absolute positioning.*/
 .noCvv {
     position: absolute;
     margin-top: 7px;
@@ -327,10 +308,12 @@
     margin-left: 290px;
 }
 
+/*Adds margin to the top of the succes message once a user presses buy now and has entered correct billing information*/
 .bought {
     margin-top: 50px;
 }
 
+/*The price has a font size of 20px.*/
 .price {
     font-size: 20px;
 }
