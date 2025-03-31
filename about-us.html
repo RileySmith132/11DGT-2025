@@ -2,10 +2,11 @@
 
 <html lang="en">
     <head>
+        <title>About Us</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="UTF-8">
-        <title>Riley's Eggs</title>
         <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="About-us.css">
         <link rel="icon" type="image/x-icon" href="images/title-image.png">
         <script src="script.js"></script>
     </head>
@@ -21,23 +22,18 @@
             <a href="about-us.html" class="nav-button" id="about-button">About Us</a>
         </div>
 
-        <!--This div acts as a container for the main content on the home page, and has a class so it can be targeted in my css.-->
-        <div class="container">
+        <!--Main image-->
+        <img alt="Riley" src="images/riley.jpeg" id="riley">
+        
+        <!--Container for all the text on the about us page-->
+        <div class="about-text">
 
-            <!--This div is a container for the text on the home page-->
-            <div class="text">
-                <h1 class="home-title">Riley's Eggs</h1>
-                <p id="homeDescription">Riley's Eggs began in 2015 as a family business, and has been successful ever since. The worlds <strong>BEST</strong> eggs.</p>
-
-                <!--
-                Button to access products page. When the button is clicked, the function in the onclick attribute will be triggered,
-                 and the browser will be redirected the products page.
-                 -->
-                <button class="viewProducts" onclick="productsPage();">View Products</button>
-            </div>
-
-            <!--Home page image-->
-            <img id="home-image" alt="free range chickens in a field" src="images/home-image.jpg">
+            <!--Title and paragraph about the business-->
+            <h1 id="about-title">About Us</h1>
+            <p id="about-paragraph">Riley's Eggs is a family-owned business that began in 2015 when a young boy returned home to find 30 chickens nestled in a brand new chicken coop. Inspired by the simple joys of raising chickens and producing fresh, high-quality eggs, Riley quickly turned this unexpected gift into a thriving business. What started as a humble venture in their backyard has now grown into a trusted local supplier known for its farm-fresh, sustainably produced eggs. With a commitment to ethical farming practices, Riley's Eggs provides customers with a product they can feel good about, knowing it comes from a place where the chickens are well cared for and the eggs are always fresh.</p>
+            
+            <!--Video-->
+            <iframe src="https://www.youtube.com/embed/K6HjarkCgC0" id="video"></iframe>
         </div>
 
         <!--This div is a container for all the content in the contact us section at the bottom of the page-->
@@ -68,7 +64,7 @@
                 <a href="about-us.html" class="pageLink">About</a>
             </div>
         </div>
-        
+
     </body>
 
 </html>

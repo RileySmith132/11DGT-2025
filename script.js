@@ -1,4 +1,3 @@
-
 //function to make the billing section pop up when buy now is clicked
 function blury(product) {
     //add blur to the background
@@ -298,6 +297,10 @@ function buy() {
         errorparagraphcvv.innerHTML = '';
         total.classList.remove('margin');
 
+        //Remove the margin from above the card number title
+        const cardnumtitle = document.querySelector('.cardNumTitle');
+        cardnumtitle.classList.remove('margin');
+
         //Clear the inputs
         Name.value = '';
         month.value = '';
@@ -322,5 +325,5 @@ function buy() {
 
 //Function to change to the products page
 function productsPage() {
-    window.location.href = "Products.html";
+    window.location.href = "products.html";
 }

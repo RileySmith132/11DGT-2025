@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Products</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="products.css">
+        <link rel="icon" type="image/x-icon" href="images/title-image.png">
+        <script src="script.js"></script>
+    </head>
+
+    <body>
+
+        <!--
+        Nav bar with links to access other pages. Classes have been added so I can target all these links at once in my css,
+        and ids have beeen added so I can target the links individually.
+        -->
+        <div class="nav-bar">
+            <a href="index.html" class="nav-button" id="home-button">Home</a>
+            <a href="products.html" class="nav-button" id="product-button">Products</a>
+            <a href="about-us.html" class="nav-button" id="about-button">About Us</a>
+            <h1 class="title">Products</h1>
+        </div>
+
+        <!--Acts as a container for all everything on the page except for the navigation bar and contact us section, so that I can blur it when the buy now buttons are pressed.-->
+        <div class="background">
+
+            <!--
+            Container for all the products.
+            Each product has a h1 tag for the title, an image, a p tag for the price, a p tag for the description, and a button with an onclick attribute to make
+            the billing section pop up.
+            -->
+            <div class="products">
+
+                <div class="product1">
+                    <h1 class="productTitle">6 Eggs</h1>
+                    <img alt="six eggs in a carton" src="images/6Eggs.jpg" class="productImg">
+                    <p class="price1">$3.00</p>
+                    <p class="productDesciption">6 Delicious free range eggs</p>
+                    <button class="buyBtn" id="js-6Eggs" onclick="blury('6 Eggs');">Buy now</button>
+                </div>
+                <div class="product2">
+                    <h1 class="productTitle">10 Eggs</h1>
+                    <img alt="10 eggs in a carton" src="images/10Eggs.jpg" class="productImg">
+                    <p class="price1">$5.00</p>
+                    <p class="productDesciption">10 Delicious free range eggs</p>
+                    <button class="buyBtn" onclick="blury('10 Eggs');">Buy now</button>
+                </div>
+
+                <div class="product3">
+                    <h1 class="productTitle">12 Eggs</h1>
+                    <img alt="12 eggs in a carton" src="images/12Eggs.jpg" class="productImg">
+                    <p class="price1">$6.00</p>
+                    <p class="productDesciption">12 Delicious free range eggs</p>
+                    <button class="buyBtn" onclick="blury('12 Eggs')">Buy now</button>
+                </div>
+
+                <div class="product4">
+                    <h1 class="productTitle">18 Eggs</h1>
+                    <img alt="18 eggs in a carton" src="images/18Eggs.jpg" class="productImg">
+                    <p class="price1">$9.00</p>
+                    <p class="productDesciption">18 Delicious free range eggs</p>
+                    <button class="buyBtn" onclick="blury('18 Eggs');">Buy now</button>
+                </div>
+
+                <div class="product5">
+                    <h1 class="productTitle">24 Eggs</h1>
+                    <img alt="24 eggs in a carton" src="images/24Eggs.jpg" class="productImg">
+                    <p class="price1">$12.00</p>
+                    <p class="productDesciption">24 Delicious free range eggs</p>
+                    <button class="buyBtn" onclick="blury('24 Eggs');">Buy now</button>
+                </div>
+
+                <div class="product6">
+                    <h1 class="productTitle">30 Eggs</h1>
+                    <img alt="30 eggs in a carton" src="images/30Eggs.jpg" class="productImg">
+                    <p class="price1">$15.00</p>
+                    <p class="productDesciption">30 Delicious free range eggs</p>
+                    <button class="buyBtn" onclick="blury('30 Eggs');">Buy now</button>
+                </div>
+
+            </div>
+        </div>
+
+        <!--Billing section - has a class of EggsDown so that the display can be set to none intil a buy now button is clicked-->
+        <div class="EggsDown">
+
+            <!--All the elements on the left side of the billing section. The left side containes a title, and image, a description, and a price.-->
+            <div class="left">
+                <h1 class="billTitle">Placeholder</h1>
+                <img alt="eggs in a carton" src="placeholder" id="eggsImage">
+                <p class="billDescription"></p>
+                <p class="price"></p>
+            </div>
+
+            <!--
+            All the elements on the right side of the billing section. The right side containes the exit button, the inputs for the card details,
+            and a price.
+            -->
+            <div class="right">
+                <button class="exit" onclick="unblury();">x</button>
+                <h1 class="billing-title">Billing information</h1>
+                <p class="nameTitle">Name on Card</p>
+                <p class="noName"></p>
+                <p class="expiryTitle">Expiry</p>
+                <input type="text" class="cardName" placeholder="Name">
+                <input type="text" class="month" placeholder="mm">
+                <input type="text" class="year" placeholder="yy">
+                <p class="noexpire"></p>
+                <p class="cardNumTitle">Card Number</p>
+                <p class="cvvTitle">CVV</p>
+                <input class="CardNum" placeholder="0000 0000 0000 0000">
+                <input type="password" placeholder="CVV" class="cvvinput">
+                <p class="noNum"></p>
+                <p class="noCvv"></p>
+                <p class="total"></p>
+                <button class="btn" onclick="buy();">Buy Now</button>
+
+                <!--This paragraph currently contains no text as it will appear as a success message once all the card inputs have correctly been filled in.-->
+                <p class="bought"></p>
+            </div>
+        </div>
+
+        <!--This div is a container for all the content in the contact us section at the bottom of the page-->
+        <div class="contact-us-section">
+            <h1 id="contact-title">Contact Us</h1>
+            <!--
+            Form for the user to fill out to send a message to inquire or give feedback. The GET method is used to send data to the server as
+            a part of the url. This form contains an input for the user's email, and an input for the message the user would like to send. The 
+            "required" attribute in each input specifies that the user must fill in these inputs, so that if the input is blank the browser will
+            display an error message and the form will not be submitted. The type attribute tells the browser what information should be entered
+            into the input, for instance type="email" tells the browser that an email must be entered into the input. If the user does not enter
+            an email that follows the structure example@example, The browser will display a message and the form will not be submitted.
+            -->
+            <form method="GET">
+                <div class="inputs">
+                    <input placeholder="Your email" id="email-input" type="email" name="email" required>
+                    <textarea placeholder="Message" id="message-input" rows="8" cols="50" name="message" required></textarea>
+                    <button id="submit-button" type="submit">Submit</button>
+                    <p id="js-submit-confirm"></p>
+                </div>
+            </form>
+
+            <!--Links to navigate to the other pages. Classes have been added so the links can be styled in my css.-->
+            <div class="page-links">
+                <a href="index.html" class="pageLink" id="index-link">Home</a>
+                <a href="products.html" class="pageLink" id="products-link">Products</a>
+                <a href="about-us.html" class="pageLink">About</a>
+            </div>
+        </div>
+    </body>
+
+</html>

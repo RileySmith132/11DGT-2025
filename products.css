@@ -317,3 +317,8 @@ and has a 1px thick black border that is slighly rounded.
 .price {
     font-size: 20px;
 }
+
+/*Set the width of the images on the billing section*/
+#eggsImage {
+    width: 250px;
+}
